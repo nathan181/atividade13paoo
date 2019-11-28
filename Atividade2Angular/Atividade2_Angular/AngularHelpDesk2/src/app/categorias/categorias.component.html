@@ -1,0 +1,9 @@
+<div class="container">
+
+    <h1 class="titulo">Categorias</h1>
+    <ul class="categorias">
+        <li *ngFor="let categoria of categoriaService.getCategorias()">{{categoria.nome}}</li>
+    </ul>
+    
+    <button routerLink="/adicionaCategoria">Adicionar Categoria</button>
+</div>
