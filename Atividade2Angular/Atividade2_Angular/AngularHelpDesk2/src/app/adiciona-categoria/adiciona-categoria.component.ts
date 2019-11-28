@@ -17,14 +17,14 @@ export class AdicionaCategoriaComponent implements OnInit {
   voltar (): void {
     this.location.back();
     }
-  adicionaCategoria(): void {
+  addCategoria(): void {
     if (this.nomeCategoria) {
       window.alert("Categoria adicionada com sucesso!");
       this.categoriaService.adicionaCategoria({ id: this.categoriaService.nextId(), nome: this.nomeCategoria });
       this.location.back();
     }
     else {
-      window.alert('Você deve preencher o nome da categoria!');
+      window.alert('sem nome de categoria');
     }
   }
 
