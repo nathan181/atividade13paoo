@@ -10,9 +10,9 @@ export class CategoriaService {
   constructor() { }
 
   categorias: Categoria[] = [
-    { id: 1, nome: 'Romance' },
-    { id: 2, nome: 'Terror' },
-    { id: 3, nome: 'Tecnologia' }
+    { id: 1, nome: 'Infantojuvenis' },
+    { id: 2, nome: 'Poesia' },
+    { id: 3, nome: 'Romances' }
   ];
 
   adicionaCategoria(categoria: Categoria): void {
@@ -21,7 +21,7 @@ export class CategoriaService {
   getCategorias(): Categoria[] {
     return this.categorias;
   }
-  nextId(): number {    //...: operador spread (expande os elementos de um vetor)   
+  nextId(): number {      
      return this.categorias.length <= 0 ? 1 : Math.max(...this.categorias.map(categoria => categoria.id)) + 1;  }
 
 
